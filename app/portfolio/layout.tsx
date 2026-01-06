@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Space_Grotesk } from "next/font/google";
-import "./globals.css";
+import "../globals.css";
+import Navbar from "../_component/Navbar";
 
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-space-grotesk",
@@ -22,6 +23,17 @@ export default function RootLayout({
       <body
         className={`${spaceGrotesk.className} font-display bg-background-light dark:bg-background-dark text-slate-900 dark:text-white overflow-hidden transition-colors duration-300`}
       >
+        <div className="fixed inset-0 z-0 pointer-events-none">
+        <div className="absolute inset-0 bg-cosmic-gradient opacity-80" />
+        <div className="absolute inset-0 grid-background" />
+
+        <div className="absolute top-[-10%] left-[-10%] w-[40vw] h-[40vw] bg-primary/20 rounded-full blur-[120px] animate-pulse-slow" />
+        <div
+          className="absolute bottom-[-10%] right-[-10%] w-[35vw] h-[35vw] bg-purple-500/20 rounded-full blur-[100px] animate-pulse-slow"
+          style={{ animationDelay: "2s" }}
+        />
+      </div>
+        <Navbar/>
         {children}
       </body>
     </html>
