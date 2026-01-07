@@ -6,18 +6,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <>
-      <div className="fixed inset-0 z-0 pointer-events-none">
-        <div className="absolute inset-0 bg-cosmic-gradient opacity-80" />
-        <div className="absolute inset-0 grid-background" />
-
-        <div className="absolute top-[-10%] left-[-10%] w-[40vw] h-[40vw] bg-primary/20 rounded-full blur-[120px] animate-pulse-slow" />
-        <div
-          className="absolute bottom-[-10%] right-[-10%] w-[35vw] h-[35vw] bg-purple-500/20 rounded-full blur-[100px] animate-pulse-slow"
-          style={{ animationDelay: "2s" }}
-        />
-      </div>
-
-      <main className="relative z-10 min-h-screen pt-24 pb-12 flex items-center">
+      <div className="relative z-10 min-h-screen pt-24 pb-12 flex items-center">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 w-full">
           <div className="flex flex-col gap-12 items-center">
             <div className="flex flex-col gap-6 text-center lg:text-left">
@@ -97,7 +86,7 @@ export default function Home() {
             <div className="absolute -inset-12 border border-purple-500/10 rounded-full animate-[spin_15s_linear_infinite_reverse] pointer-events-none border-dashed" />
           </div>
         </div>
-      </main>
+      </div>
     </>
   );
 }
