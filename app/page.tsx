@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { MdOutlineToken,MdSensors } from "react-icons/md";
+import { MdOutlineToken, MdSensors } from "react-icons/md";
 import { IoIosCode } from "react-icons/io";
 import Link from "next/link";
 
@@ -32,19 +32,19 @@ export default function Home() {
               </h2>
               <div className="flex flex-wrap gap-4 pt-4 justify-center lg:justify-start">
                 <Link href="/portfolio">
-                <button className="relative overflow-hidden group bg-primary hover:bg-blue-600 text-white font-bold py-3.5 px-8 rounded-lg transition-all duration-300 shadow-[0_0_20px_rgba(37,157,244,0.3)] hover:shadow-[0_0_30px_rgba(37,157,244,0.5)]">
-                  <span className="relative z-10 flex items-center gap-2">
-                    Enter My World
-                    <span className="material-symbols-outlined text-lg group-hover:rotate-90 transition-transform">
-                      <MdSensors  className="size-6"/>
+                  <button className="relative overflow-hidden group bg-primary hover:bg-blue-600 text-white font-bold py-3.5 px-8 rounded-lg transition-all duration-300 shadow-[0_0_20px_rgba(37,157,244,0.3)] hover:shadow-[0_0_30px_rgba(37,157,244,0.5)]">
+                    <span className="relative z-10 flex items-center gap-2">
+                      Enter My World
+                      <span className="  text-lg group-hover:rotate-90 transition-transform">
+                        <MdSensors className="size-6" />
+                      </span>
                     </span>
-                  </span>
-                </button>
+                  </button>
                 </Link>
 
                 <button className="glass-panel hover:bg-white/5 text-white font-bold py-3.5 px-8 rounded-lg transition-all duration-300 flex items-center gap-2 group">
                   Explore Projects
-                  <span className="material-symbols-outlined text-lg group-hover:translate-x-1 transition-transform">
+                  <span className="  text-lg group-hover:translate-x-1 transition-transform">
                     <IoIosCode className="size-6" />
                   </span>
                 </button>
@@ -69,7 +69,7 @@ export default function Home() {
               />
 
               <div className="absolute top-10 right-10 glass-panel p-3 rounded-lg animate-bounce duration-3000">
-                <span className="material-symbols-outlined text-primary text-3xl">
+                <span className="  text-primary text-3xl">
                   <MdOutlineToken />
                 </span>
               </div>
