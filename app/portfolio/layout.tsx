@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Space_Grotesk } from "next/font/google";
-import Navbar from "../_component/Navbar";
 
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-space-grotesk",
@@ -32,7 +31,6 @@ export default function PortfolioLayout({
             style={{ animationDelay: "2s" }}
           />
         </div>
-        <Navbar />
         <main>{children}</main>
       </div>
     </>
