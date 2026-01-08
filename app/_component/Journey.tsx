@@ -1,5 +1,5 @@
 import { FaGraduationCap, FaBuildingUser } from "react-icons/fa6";
-import { FaChalkboardTeacher } from "react-icons/fa";
+import { FaArrowRight, FaChalkboardTeacher } from "react-icons/fa";
 
 const Journey = () => {
   return (
@@ -37,7 +37,7 @@ const Journey = () => {
           <div className="absolute left-6 top-0 bottom-0 w-[3px] md:hidden">
             <div className="h-full w-full bg-linear-to-b from-transparent via-primary/70 to-transparent rounded-full shadow-[0_0_25px_rgba(99,102,241,0.6)]" />
           </div>
-          <div className="relative grid grid-cols-1 md:grid-cols-2 gap-8 mb-24 group">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-24 group">
             <div className="hidden md:block" />
 
             <div className="relative pl-12 md:col-start-2">
@@ -79,7 +79,7 @@ const Journey = () => {
                   ].map((tech) => (
                     <span
                       key={tech}
-                      className="px-3 py-1 text-xs rounded-full bg-background-dark border border-white/10 text-gray-300 hover:border-primary/60 hover:text-primary transition-colors"
+                      className="px-3 py-1 text-xs rounded-full bg-background-dark border border-white/10 text-gray-300 hover:border-primary/60 hover:text-primary transition-colors cursor-pointer"
                     >
                       {tech}
                     </span>
@@ -89,7 +89,7 @@ const Journey = () => {
             </div>
           </div>
 
-          <div className="relative grid grid-cols-1 md:grid-cols-2 gap-8 mb-24 group">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-24 group">
             <div className="relative pl-12 md:pl-0 md:pr-12 md:text-right">
               <div className="absolute right-4 top-6 w-4 h-4 rounded-full bg-background-dark border-2 border-primary shadow-[0_0_15px_rgba(99,102,241,0.6)] transition-colors group-hover:bg-primary" />
 
@@ -133,7 +133,7 @@ const Journey = () => {
                   ].map((tech) => (
                     <span
                       key={tech}
-                      className="px-3 py-1 text-xs rounded-full bg-background-dark border border-white/10 text-gray-300 hover:border-secondary/60 hover:text-secondary transition-colors"
+                      className="px-3 py-1 text-xs rounded-full bg-background-dark border border-white/10 text-gray-300 hover:border-primary/60 hover:text-primary transition-colors cursor-pointer"
                     >
                       {tech}
                     </span>
@@ -143,7 +143,7 @@ const Journey = () => {
             </div>
           </div>
 
-          <div className="relative grid grid-cols-1 md:grid-cols-2 gap-8 mb-24 group">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-24 group">
             <div className="hidden md:block" />
 
             <div className="relative pl-12 md:col-start-2">
@@ -193,20 +193,36 @@ const Journey = () => {
           </div>
         </div>
 
-        <div className="relative z-10 max-w-4xl w-full mt-20 mb-24">
-          <div className="glass-panel rounded-2xl p-12 text-center border-t border-primary/30 relative overflow-hidden">
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(99,102,241,0.15),transparent_70%)]" />
+        <div className="max-w-4xl w-full mt-24 mb-28">
+          <div className="glass-panel rounded-2xl p-12 text-center border border-primary/30 relative overflow-hidden">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(99,102,241,0.12),transparent_65%)]" />
 
             <h2 className="text-4xl font-bold text-white mb-4">
-              Ready to launch a project?
+              Ready for the Next Chapter
             </h2>
-            <p className="text-gray-400 mb-8">
-              Initialize communication protocols and build the future together.
+
+            <p className="text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed">
+              I’m a React & Next.js developer focused on building scalable,
+              type-safe products with real impact. Currently working on EC-OneX
+              and open to frontend or full-stack opportunities where design and
+              engineering meet.
             </p>
 
-            <button className="bg-primary text-white px-8 py-4 rounded-lg font-bold shadow-[0_0_25px_rgba(99,102,241,0.6)] hover:scale-105 transition">
-              Initialize Contact Protocol →
-            </button>
+            <div className="flex justify-center gap-6 flex-wrap">
+              <div
+                className="bg-primary text-white px-8 py-4 rounded-lg font-semibold shadow-[0_0_30px_rgba(99,102,241,0.55)]
+        hover:scale-105 transition"
+              >
+                <span className="flex items-center gap-3">
+                  Get in Touch
+                  <FaArrowRight className="text-lg" />
+                </span>
+              </div>
+
+              <div className="px-8 py-4 rounded-lg font-semibold text-primary border border-primary/40 hover:bg-primary/10 transition">
+                View Resume
+              </div>
+            </div>
           </div>
         </div>
       </div>
