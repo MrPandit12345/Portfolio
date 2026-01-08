@@ -1,5 +1,5 @@
 import About from "../_component/About";
-import Skills from "../_component/Skills";
+import Journey from "../_component/Journey";
 import Projects from "../_component/Projects";
 import Contact from "../_component/Contact";
 import Navbar from "../_component/Navbar";
@@ -12,16 +12,16 @@ const Page = () => {
       <main className="pt-12">
         <section
           id="about"
-          className="scroll-mt-28 px-6 py-12 border-b border-gray-700"
+          className="scroll-mt-28 px-6 py-12 border-gray-700"
         >
           <About />
         </section>
 
         <section
-          id="skills"
+          id="journey"
           className="scroll-mt-28 px-6 py-12 border-b border-gray-700 mt-24"
         >
-          <Skills />
+          <Journey />
         </section>
 
         <section
