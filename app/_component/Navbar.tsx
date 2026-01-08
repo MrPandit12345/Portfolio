@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 
 const sections = [
   { name: "About", path: "#about" },
-  { name: "Skill", path: "#skills" },
+  { name: "Journey", path: "#journey" },
   { name: "Project", path: "#projects" },
   { name: "Contact", path: "#contact" },
 ];

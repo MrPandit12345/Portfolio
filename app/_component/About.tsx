@@ -88,7 +88,7 @@ const About = () => {
                   </span>
                 </div>
 
-                <p className="text-white/70 text-base leading-relaxed mb-6 font-body">
+                <p className="text-white/70 text-base leading-relaxed mb-6 font-body line-clamp-5 md:line-clamp-none">
                   I am a full-stack web developer focused on building scalable,
                   type-safe, and maintainable web applications. My core
                   expertise lies in the MERN stack, complemented by Next.js and

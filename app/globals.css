@@ -30,7 +30,6 @@
 }
 
 body {
-
   font-family: Arial, Helvetica, sans-serif;
 }
 .glass-panel {
@@ -53,4 +52,31 @@ body {
 
 .text-glow {
   text-shadow: 0 0 20px rgba(37, 157, 244, 0.5);
+}
+
+.timeline-line {
+  background: linear-gradient(
+    180deg,
+    rgba(37, 157, 244, 0) 0%,
+    #259df4 50%,
+    rgba(37, 157, 244, 0) 100%
+  );
+  width: 2px;
+  box-shadow: 0 0 8px #259df4;
+}
+
+.timeline-node {
+  box-shadow: 0 0 10px #259df4;
+}
+
+.bg-grid {
+  background-size: 40px 40px;
+  mask-image: linear-gradient(to bottom, transparent, black, transparent);
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 5%,
+    black 40%,
+    black 80%,
+    transparent 95%
+  );
 }
