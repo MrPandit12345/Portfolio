@@ -1,11 +1,16 @@
+"use client";
+
 import { FaGraduationCap, FaBuildingUser } from "react-icons/fa6";
 import { FaArrowRight, FaChalkboardTeacher } from "react-icons/fa";
-import Link from "next/link";
 
 const Journey = () => {
+  const handlescrollToContact = () => {
+    const contactSection = document.getElementById("contact");
+    contactSection?.scrollIntoView({ behavior: "smooth" });
+  };
   return (
     <>
-      <div className="relative z-10 grow flex flex-col items-center py-6 px-4 md:px-8 overflow-hidden">
+      <div className="relative z-10 grow flex flex-col items-center py-6 px-4 md:px-8 overflow-x-hidden">
         <div className="pointer-events-none absolute inset-0 z-0">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(99,102,241,0.18),transparent_65%)]" />
         </div>
@@ -194,7 +199,7 @@ const Journey = () => {
           </div>
         </div>
 
-        <div className="max-w-4xl w-full mt-24 mb-28">
+        <div className="max-w-4xl w-full my-20">
           <div className="glass-panel rounded-2xl p-12 text-center border border-primary/30 relative overflow-hidden">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(99,102,241,0.12),transparent_65%)]" />
 
@@ -208,23 +213,6 @@ const Journey = () => {
               to frontend or full-stack opportunities where thoughtful design
               meets strong engineering
             </p>
-
-            <div className="flex justify-center gap-6 flex-wrap">
-              <Link
-                href="/portfolio#contact"
-                className="bg-primary text-white px-8 py-4 rounded-lg font-semibold shadow-[0_0_30px_rgba(99,102,241,0.55)]
-        hover:scale-105 transition"
-              >
-                <span className="flex items-center gap-3">
-                  Get in Touch
-                  <FaArrowRight className="text-lg" />
-                </span>
-              </Link>
-
-              <div className="px-8 py-4 rounded-lg font-semibold text-primary border border-primary/40 hover:bg-primary/10 transition">
-                View Resume
-              </div>
-            </div>
           </div>
         </div>
       </div>

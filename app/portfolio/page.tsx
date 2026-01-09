@@ -19,7 +19,7 @@ const Page = () => {
 
         <section
           id="journey"
-          className="scroll-mt-28 px-6 py-8 mt-18"
+          className="scroll-mt-28 px-6 py-8 mt-16"
         >
           <Journey />
         </section>
