@@ -1,5 +1,6 @@
 import { FaGraduationCap, FaBuildingUser } from "react-icons/fa6";
 import { FaArrowRight, FaChalkboardTeacher } from "react-icons/fa";
+import Link from "next/link";
 
 const Journey = () => {
   return (
@@ -202,14 +203,15 @@ const Journey = () => {
             </h2>
 
             <p className="text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed">
-              I’m a React & Next.js developer focused on building scalable,
-              type-safe products with real impact. Currently working on EC-OneX
-              and open to frontend or full-stack opportunities where design and
-              engineering meet.
+              I’m a React & Next.js developer passionate about building
+              scalable, type-safe applications with real-world impact. I’m open
+              to frontend or full-stack opportunities where thoughtful design
+              meets strong engineering
             </p>
 
             <div className="flex justify-center gap-6 flex-wrap">
-              <div
+              <Link
+                href="/portfolio#contact"
                 className="bg-primary text-white px-8 py-4 rounded-lg font-semibold shadow-[0_0_30px_rgba(99,102,241,0.55)]
         hover:scale-105 transition"
               >
@@ -217,7 +219,7 @@ const Journey = () => {
                   Get in Touch
                   <FaArrowRight className="text-lg" />
                 </span>
-              </div>
+              </Link>
 
               <div className="px-8 py-4 rounded-lg font-semibold text-primary border border-primary/40 hover:bg-primary/10 transition">
                 View Resume
