@@ -1,11 +1,14 @@
+"use client";
 import Image from "next/image";
-import { FaFolderOpen } from "react-icons/fa";
+import { FaFolderOpen, FaGithub } from "react-icons/fa";
 
 interface ProjectData {
   id: number;
   title: string;
   description: string;
   image: string;
+  repo?: string;
+  url?: string;
   tags: string[];
 }
 
@@ -14,8 +17,18 @@ interface Props {
 }
 
 export function ProjectCard({ project }: Props) {
+  const handleGitHubClick = () => {
+    window.open(`https://github.com/MrPandit12345/${project.repo}`);
+  };
+  const handleCardClick = () => {
+    window.open(`${project.url}`);
+  };
+
   return (
-    <div className="group relative flex flex-col bg-slate-900/40 backdrop-blur-md border border-glass-border rounded-xl overflow-hidden cursor-pointer transition-transform hover:-translate-y-1">
+    <div
+      className="group relative flex flex-col bg-slate-900/40 backdrop-blur-md border border-glass-border rounded-xl overflow-hidden cursor-pointer transition-transform hover:-translate-y-1"
+      onClick={handleCardClick}
+    >
       <div className="relative h-54 w-full overflow-hidden">
         <div className="absolute inset-0 bg-linear-to-t from-slate-900 to-transparent z-10 opacity-70" />
 
@@ -27,6 +40,12 @@ export function ProjectCard({ project }: Props) {
           sizes="(max-width: 768px) 100vw, 33vw"
           priority={false}
         />
+        <span
+          className="absolute top-2 right-2 text-white/80 text-base font-mono bg-slate-900/50 backdrop-blur-lg px-2 py-1 rounded hover:bg-primary/80 hover:text-white transition-colors flex items-center cursor-pointer z-20"
+          onClick={handleGitHubClick}
+        >
+          CodeBase <FaGithub className="inline-block ml-1" />
+        </span>
       </div>
 
       <div className="p-5 flex flex-col grow">
