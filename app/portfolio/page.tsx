@@ -12,21 +12,21 @@ const Page = () => {
       <main className="pt-12">
         <section
           id="about"
-          className="scroll-mt-28 px-6 py-12 border-gray-700"
+          className="scroll-mt-28 px-6 py-12"
         >
           <About />
         </section>
 
         <section
           id="journey"
-          className="scroll-mt-28 px-6 py-12 border-b border-gray-700 mt-24"
+          className="scroll-mt-28 px-6 py-8 mt-18"
         >
           <Journey />
         </section>
 
         <section
           id="projects"
-          className="scroll-mt-28 px-6 py-12 border-b border-gray-700 mt-24"
+          className="scroll-mt-28 px-6 py-6 mt-6"
         >
           <Projects />
         </section>
