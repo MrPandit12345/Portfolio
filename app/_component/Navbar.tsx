@@ -25,7 +25,7 @@ const Navbar = () => {
         });
       },
       {
-        rootMargin: "-80px 0px -50% 0px", 
+        rootMargin: "-80px 0px -50% 0px",
         threshold: 0,
       }
     );
@@ -48,7 +48,8 @@ const Navbar = () => {
             </div>
 
             <h1 className="text-white font-bold text-xl hidden sm:block">
-              Vishal <span className="text-sm text-primary align-top">v1.0</span>
+              Vishal{" "}
+              <span className="text-sm text-primary align-top">v1.0</span>
             </h1>
           </div>
 
@@ -68,7 +69,10 @@ const Navbar = () => {
             ))}
           </div>
 
-          <button className="bg-primary/10 hover:bg-primary/20 text-primary border border-primary/50 px-5 py-2 rounded-full text-sm font-bold flex items-center gap-2">
+          <button
+            className="bg-primary/10 hover:bg-primary/20 text-primary border border-primary/50 px-5 py-2 rounded-full text-sm font-bold flex items-center gap-2"
+            onClick={() => window.open("/resume.pdf", "_blank")}
+          >
             Resume
             <FaArrowCircleRight />
           </button>
