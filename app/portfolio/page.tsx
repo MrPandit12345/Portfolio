@@ -33,7 +33,7 @@ const Page = () => {
 
         <section
           id="contact"
-          className="scroll-mt-28 px-6 py-12 mt-24"
+          className="scroll-mt-28 px-6 py-8 mt-6"
         >
           <Contact />
         </section>
