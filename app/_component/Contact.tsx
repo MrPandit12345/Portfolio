@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import {
   FaUser,
   FaMailBulk,
@@ -8,6 +11,32 @@ import {
 import { IoMdSend } from "react-icons/io";
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    try {
+      const res = await fetch("/api/submit-form", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await res.json();
+      console.log("Server response:", data);
+      alert("Form submitted successfully!");
+      setFormData({ name: "", email: "", message: "" });
+    } catch (err) {
+      console.error(err);
+      alert("Error submitting form");
+    }
+
+    console.warn("Form submitted:", formData);
+  };
   return (
     <>
       <div className=" w-full text-center mb-2">
@@ -57,7 +86,7 @@ const Contact = () => {
                 </p>
               </div>
 
-              <form className="space-y-6">
+              <form className="space-y-6" onSubmit={handleSubmit}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <label className="flex flex-col gap-2 group/input">
                     <span className="text-gray-400 text-xs font-mono uppercase tracking-wider group-focus-within/input:text-primary transition-colors">
@@ -67,6 +96,10 @@ const Contact = () => {
                       <FaUser className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500 group-focus-within/input:text-primary transition-colors" />
                       <input
                         type="text"
+                        value={formData.name}
+                        onChange={(e) =>
+                          setFormData({ ...formData, name: e.target.value })
+                        }
                         placeholder="Enter your name"
                         className="neon-input w-full bg-background-dark/50 border border-gray-700 rounded-lg py-4 pl-12 pr-4 text-white placeholder-gray-600 focus:border-primary focus:ring-1 focus:ring-primary focus:outline-none transition-all duration-300"
                       />
@@ -82,6 +115,10 @@ const Contact = () => {
                       <input
                         type="email"
                         placeholder="name@example.com"
+                        value={formData.email}
+                        onChange={(e) =>
+                          setFormData({ ...formData, email: e.target.value })
+                        }
                         className="neon-input w-full bg-background-dark/50 border border-gray-700 rounded-lg py-4 pl-12 pr-4 text-white placeholder-gray-600 focus:border-primary focus:ring-1 focus:ring-primary focus:outline-none transition-all duration-300"
                       />
                     </div>
@@ -97,6 +134,10 @@ const Contact = () => {
                     <textarea
                       rows={4}
                       placeholder="Type your message here..."
+                      value={formData.message}
+                      onChange={(e) =>
+                        setFormData({ ...formData, message: e.target.value })
+                      }
                       className="neon-input w-full bg-background-dark/50 border border-gray-700 rounded-lg py-4 pl-12 pr-4 text-white placeholder-gray-600 focus:border-primary focus:ring-1 focus:ring-primary focus:outline-none transition-all duration-300 resize-none"
                     />
                   </div>
@@ -110,7 +151,7 @@ const Contact = () => {
                   </p>
 
                   <button
-                    type="button"
+                    type="submit"
                     className="group relative inline-flex items-center justify-center px-8 py-4 font-bold text-white transition-all duration-200 bg-primary/10 border border-primary/50 font-display hover:bg-primary hover:border-primary hover:shadow-[0_0_20px_rgba(37,157,244,0.4)] rounded-lg overflow-hidden"
                   >
                     <span className="absolute w-0 h-0 transition-all duration-500 ease-out bg-white rounded-full group-hover:w-56 group-hover:h-56 opacity-10" />
