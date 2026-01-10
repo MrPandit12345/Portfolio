@@ -7,7 +7,7 @@ The portfolio is designed with a strong focus on **performance, clean UI, scalab
 ---
 
 ## 🚀 Live Portfolio
-🔗 **Visit:** _[Add your live portfolio URL here]_
+🔗 **Visit:** _[[https://portfolio-vishal-1603.vercel.app/](https://portfolio-vishal-1603.vercel.app/)]_
 
 ---
 
