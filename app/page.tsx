@@ -42,12 +42,14 @@ export default function Home() {
                   </button>
                 </Link>
 
+                <Link href="/portfolio#projects">
                 <button className="glass-panel hover:bg-white/5 text-white font-bold py-3.5 px-8 rounded-lg transition-all duration-300 flex items-center gap-2 group">
                   Explore Projects
                   <span className="  text-lg group-hover:translate-x-1 transition-transform">
                     <IoIosCode className="size-6" />
                   </span>
                 </button>
+                </Link>
               </div>
             </div>
           </div>

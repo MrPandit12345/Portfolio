@@ -9,6 +9,7 @@ import {
   FaLinkedin,
 } from "react-icons/fa";
 import { IoMdSend } from "react-icons/io";
+import { ToastContainer, toast } from "react-toastify";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -28,11 +29,11 @@ const Contact = () => {
 
       const data = await res.json();
       console.log("Server response:", data);
-      alert("Form submitted successfully!");
+      toast.success("Thank you for reaching out! I'll get back to you soon.");
       setFormData({ name: "", email: "", message: "" });
     } catch (err) {
       console.error(err);
-      alert("Error submitting form");
+      toast.error("Error submitting form");
     }
 
     console.warn("Form submitted:", formData);
@@ -100,6 +101,7 @@ const Contact = () => {
                         onChange={(e) =>
                           setFormData({ ...formData, name: e.target.value })
                         }
+                        required
                         placeholder="Enter your name"
                         className="neon-input w-full bg-background-dark/50 border border-gray-700 rounded-lg py-4 pl-12 pr-4 text-white placeholder-gray-600 focus:border-primary focus:ring-1 focus:ring-primary focus:outline-none transition-all duration-300"
                       />
@@ -119,6 +121,7 @@ const Contact = () => {
                         onChange={(e) =>
                           setFormData({ ...formData, email: e.target.value })
                         }
+                        required
                         className="neon-input w-full bg-background-dark/50 border border-gray-700 rounded-lg py-4 pl-12 pr-4 text-white placeholder-gray-600 focus:border-primary focus:ring-1 focus:ring-primary focus:outline-none transition-all duration-300"
                       />
                     </div>
@@ -163,6 +166,18 @@ const Contact = () => {
                 </div>
               </form>
             </div>
+            <ToastContainer
+              position="bottom-right"
+              autoClose={5000}
+              hideProgressBar={false}
+              newestOnTop={false}
+              closeOnClick
+              rtl={false}
+              pauseOnFocusLoss
+              draggable
+              pauseOnHover
+              theme="dark"
+            />
           </div>
 
           <div className="lg:col-span-5 relative h-full min-h-125 flex flex-col items-center justify-center">

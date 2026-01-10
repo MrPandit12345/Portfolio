@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import dbConnect from "@/lib/mongoose";
-import FormSubmission from "@/models/Form"; // make sure your model file is Form.ts
+import FormSubmission from "@/models/Form"; 
 
 export async function POST(request: Request) {
   try {
@@ -15,8 +15,9 @@ export async function POST(request: Request) {
         { status: 400 }
       );
     }
+    const dataSave = {name, email, message: message || ""};
 
-    const submission = await FormSubmission.create({ name, email, message });
+    const submission = await FormSubmission.create(dataSave);
 
     return NextResponse.json(
       { message: "Form data saved", data: submission },
